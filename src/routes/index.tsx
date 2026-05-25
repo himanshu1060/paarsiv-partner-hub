@@ -868,8 +868,8 @@ function Contact() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           eyebrow="Contact"
-          title="Ready to Co-Sell with Paarsiv?"
-          subtitle="We work directly with Salesforce AEs to deliver implementation excellence for your clients. Let's talk."
+          title="Ready to Transform Your Salesforce Experience?"
+          subtitle="Tell us about your Salesforce goals and we'll show you how we can help."
         />
         <div className="mt-14 grid lg:grid-cols-5 gap-10">
           <form
