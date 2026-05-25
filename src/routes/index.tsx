@@ -144,7 +144,7 @@ function Nav() {
             className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
             style={{ backgroundColor: TEAL }}
           >
-            Partner With Us <ArrowRight className="h-4 w-4" />
+            Talk to Us <ArrowRight className="h-4 w-4" />
           </a>
         </nav>
         <button
@@ -174,7 +174,7 @@ function Nav() {
               className="mt-2 inline-flex justify-center rounded-lg px-4 py-2.5 text-sm font-semibold text-white"
               style={{ backgroundColor: TEAL }}
             >
-              Partner With Us
+              Talk to Us
             </a>
           </div>
         </div>
@@ -213,8 +213,8 @@ function Hero() {
             Salesforce Implementation Partner
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
-            Your Clients Deserve a Salesforce Partner
-            <span style={{ color: TEAL }}> Who Delivers.</span>
+            Transform Your Salesforce
+            <span style={{ color: TEAL }}> Investment Into Results.</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-white/70 max-w-3xl leading-relaxed">
             Paarsiv specialises in Salesforce Marketing Cloud, Sales Cloud, Data
@@ -323,13 +323,13 @@ function Why() {
       icon: BarChart3,
       title: "We Show Impact, Not Just Activity",
       body:
-        "Every engagement is measured. ROI tracking, campaign analytics, delivery accuracy — we report what matters to your clients.",
+        "Every engagement is measured. ROI tracking, campaign analytics, delivery accuracy — we report what matters to your business.",
     },
   ];
   return (
     <section className="py-20 lg:py-28 bg-white">
       <div className="mx-auto max-w-7xl px-6">
-        <SectionHeader eyebrow="Why Paarsiv" title="Why Salesforce AEs Trust Paarsiv" />
+        <SectionHeader eyebrow="Why Paarsiv" title="Why Clients Choose Paarsiv" />
         <div className="mt-14 grid md:grid-cols-3 gap-6">
           {items.map((it, i) => {
             const Icon = it.icon;
@@ -860,7 +860,7 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const trust = [
     { icon: Clock, label: "Response within 24 hours" },
-    { icon: UserCheck, label: "Dedicated AE liaison" },
+    { icon: UserCheck, label: "Dedicated project lead" },
     { icon: FileLock2, label: "NDA available on request" },
   ];
   return (
@@ -868,8 +868,8 @@ function Contact() {
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           eyebrow="Contact"
-          title="Ready to Co-Sell with Paarsiv?"
-          subtitle="We work directly with Salesforce AEs to deliver implementation excellence for your clients. Let's talk."
+          title="Ready to Transform Your Salesforce Experience?"
+          subtitle="Tell us about your Salesforce goals and we'll show you how we can help."
         />
         <div className="mt-14 grid lg:grid-cols-5 gap-10">
           <form
@@ -901,14 +901,6 @@ function Contact() {
                 <div className="sm:col-span-2">
                   <Field label="Email" name="email" type="email" required />
                 </div>
-                <label className="sm:col-span-2 inline-flex items-center gap-2.5 text-sm text-[#0D1B2A]">
-                  <input
-                    type="checkbox"
-                    defaultChecked
-                    className="h-4 w-4 rounded border-[#E5E7EB] accent-[#1BCA9B]"
-                  />
-                  I'm a Salesforce AE
-                </label>
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-medium text-[#0D1B2A] mb-1.5">
                     Message <span className="text-[#6B7280] font-normal">(optional)</span>
@@ -925,7 +917,7 @@ function Contact() {
                     className="w-full inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                     style={{ backgroundColor: TEAL }}
                   >
-                    Let's Partner <ArrowRight className="h-4 w-4" />
+                    Start Your Project <ArrowRight className="h-4 w-4" />
                   </button>
                 </div>
               </div>
