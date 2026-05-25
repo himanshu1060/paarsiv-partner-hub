@@ -860,7 +860,7 @@ function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const trust = [
     { icon: Clock, label: "Response within 24 hours" },
-    { icon: UserCheck, label: "Dedicated AE liaison" },
+    { icon: UserCheck, label: "Dedicated project lead" },
     { icon: FileLock2, label: "NDA available on request" },
   ];
   return (
@@ -901,14 +901,6 @@ function Contact() {
                 <div className="sm:col-span-2">
                   <Field label="Email" name="email" type="email" required />
                 </div>
-                <label className="sm:col-span-2 inline-flex items-center gap-2.5 text-sm text-[#0D1B2A]">
-                  <input
-                    type="checkbox"
-                    defaultChecked
-                    className="h-4 w-4 rounded border-[#E5E7EB] accent-[#1BCA9B]"
-                  />
-                  I'm a Salesforce AE
-                </label>
                 <div className="sm:col-span-2">
                   <label className="block text-sm font-medium text-[#0D1B2A] mb-1.5">
                     Message <span className="text-[#6B7280] font-normal">(optional)</span>
@@ -925,7 +917,7 @@ function Contact() {
                     className="w-full inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                     style={{ backgroundColor: TEAL }}
                   >
-                    Let's Partner <ArrowRight className="h-4 w-4" />
+                    Start Your Project <ArrowRight className="h-4 w-4" />
                   </button>
                 </div>
               </div>
