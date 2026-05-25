@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Paarsiv is a Salesforce implementation partner specialising in Marketing Cloud, Sales Cloud, Data Cloud, and MCP — 25+ certified professionals, 15+ active projects." },
       { name: "author", content: "Paarsiv" },
       { property: "og:title", content: "Paarsiv — Your Salesforce Delivery Partner" },
-      { property: "og:description", content: "Salesforce Marketing Cloud, Sales Cloud, Data Cloud & MCP implementations. Built for Salesforce AEs who need a partner they can trust." },
+      { property: "og:description", content: "Paarsiv is a Salesforce implementation partner specialising in Marketing Cloud, Sales Cloud, Data Cloud, and MCP — 25+ certified professionals, 15+ active projects." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Paarsiv — Your Salesforce Delivery Partner" },
+      { name: "twitter:description", content: "Paarsiv is a Salesforce implementation partner specialising in Marketing Cloud, Sales Cloud, Data Cloud, and MCP — 25+ certified professionals, 15+ active projects." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a6ff2687-0a68-4845-8015-62962de4b6a6/id-preview-69ecc1c8--6ca2541f-5fb5-4a3a-9eaf-2b419e68bc9d.lovable.app-1779730166560.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a6ff2687-0a68-4845-8015-62962de4b6a6/id-preview-69ecc1c8--6ca2541f-5fb5-4a3a-9eaf-2b419e68bc9d.lovable.app-1779730166560.png" },
     ],
     links: [
       {
