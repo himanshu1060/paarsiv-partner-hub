@@ -313,11 +313,11 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "klm",
-    name: "KLM",
-    industry: "Jewellery & Fashion",
+    name: "Kalamandir",
+    industry: "Ethnic Wear & Fashion",
     clouds: ["SFMC", "APIs", "Webhooks", "ENS"],
-    brandSummary: "KLM Jewellers is an established jewellery and fashion retailer running active WhatsApp campaign programmes to engage its customer base. As a brand where trust and communication quality directly influence high-value purchasing decisions, having real-time visibility into campaign delivery and CRM integration is essential to maintaining the premium customer experience their clientele expects.",
-    brandFacts: ["Established jewellery and fashion retailer", "High-value purchase environment", "Active WhatsApp and CRM-integrated campaigns"],
+    brandSummary: "Kalamandir is one of South India's most iconic ethnic wear destinations, celebrated for its saree collections and multi-brand fashion retail footprint across Andhra Pradesh, Telangana, and Karnataka. With a loyal customer base built on trust and tradition, seamless communication and campaign visibility are central to preserving the premium shopping experience Kalamandir is known for.",
+    brandFacts: ["Iconic South Indian ethnic wear brand", "Part of Sai Silks Kalamandir Ltd (listed company)", "Multi-brand retail across AP, Telangana & Karnataka"],
     category: "Integrations",
     impact: [
       "Exposed SFMC templates via API for seamless CRM visibility",
