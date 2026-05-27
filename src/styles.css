@@ -211,6 +211,18 @@
   animation: prs-scroll-dot 1.6s ease-in-out infinite;
 }
 
+/* Staggered chevron bounce — draws eye downward */
+@keyframes prs-chevron-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.9; }
+  50% { transform: translateY(5px); opacity: 0.4; }
+}
+.prs-chevron-1 {
+  animation: prs-chevron-bounce 1.4s ease-in-out infinite;
+}
+.prs-chevron-2 {
+  animation: prs-chevron-bounce 1.4s ease-in-out infinite 0.22s;
+}
+
 /* ─── Testimonial slide-in ─── */
 @keyframes prs-slide-in {
   from { opacity: 0; transform: translateY(14px) scale(0.98); }
@@ -267,7 +279,7 @@
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .prs-reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
-  .prs-float, .prs-marquee, .prs-scroll-dot { animation: none !important; }
+  .prs-float, .prs-marquee, .prs-scroll-dot, .prs-chevron-1, .prs-chevron-2 { animation: none !important; }
   .prs-menu-in, .prs-overlay-in, .prs-nav-stagger, .prs-page-enter, .prs-slide-in { animation: none !important; opacity: 1 !important; transform: none !important; }
   .prs-progress-bar { animation: none !important; }
 }

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { NAVY, TEAL } from "../theme";
 import { Counter } from "../Counter";
 import { ScrollReveal } from "../ScrollReveal";
@@ -38,7 +38,6 @@ function ParticleField() {
           />
         );
       })}
-      {/* Grid lines */}
       <div
         className="absolute inset-0"
         style={{
@@ -48,7 +47,6 @@ function ParticleField() {
           opacity: 0.05,
         }}
       />
-      {/* Ambient radial glow behind the headline */}
       <div
         className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
@@ -64,18 +62,27 @@ function ParticleField() {
 }
 
 export function Hero() {
+  const handleScroll = () => {
+    window.scrollBy({ top: window.innerHeight * 0.85, behavior: "smooth" });
+  };
+
   return (
     <section
-      className="relative pt-36 pb-12 lg:pt-44 lg:pb-16 overflow-hidden"
-      style={{ backgroundColor: NAVY }}
+      className="relative overflow-hidden"
+      style={{
+        backgroundColor: NAVY,
+        minHeight: "100vh",
+        paddingTop: "clamp(100px, 14vh, 160px)",
+        paddingBottom: "clamp(32px, 4vh, 56px)",
+      }}
     >
       <ParticleField />
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-6 flex flex-col" style={{ minHeight: "inherit" }}>
         {/* Centered content */}
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
             <div
-              className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] mb-7"
+              className="inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] mb-6"
               style={{
                 borderColor: "rgba(27,202,155,0.35)",
                 color: TEAL,
@@ -92,7 +99,7 @@ export function Hero() {
 
           <ScrollReveal delay={80}>
             <h1
-              className="text-4xl md:text-6xl lg:text-[72px] font-bold text-white leading-[1.05] tracking-tight"
+              className="text-4xl md:text-6xl lg:text-[68px] font-bold text-white leading-[1.05] tracking-tight"
               style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
             >
               Your Clients Deserve a Salesforce Partner Who Delivers.
@@ -100,7 +107,7 @@ export function Hero() {
           </ScrollReveal>
 
           <ScrollReveal delay={160}>
-            <p className="mt-7 text-base md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-5 text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
               Paarsiv specialises in Salesforce Marketing Cloud, Sales Cloud,
               Data Cloud, and MCP implementations — with a team of 25+ certified
               professionals across 15+ active client projects.
@@ -108,7 +115,7 @@ export function Hero() {
           </ScrollReveal>
 
           <ScrollReveal delay={240}>
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 to="/projects"
                 className="inline-flex items-center gap-2 rounded-[10px] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5"
@@ -127,11 +134,11 @@ export function Hero() {
         </div>
 
         {/* Stats — premium top-border cards */}
-        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
           {STATS.map((s, i) => (
             <ScrollReveal key={i} delay={i * 90}>
               <div
-                className="rounded-2xl px-6 py-7 transition-all duration-300 hover:-translate-y-1"
+                className="rounded-2xl px-6 py-6 transition-all duration-300 hover:-translate-y-1"
                 style={{
                   background: "linear-gradient(160deg, #162B3E 0%, #112236 100%)",
                   borderTop: `3px solid ${TEAL}`,
@@ -139,7 +146,7 @@ export function Hero() {
                 }}
               >
                 <Counter target={s.v} suffix={s.suffix} />
-                <div className="mt-2 text-sm text-white/65 leading-snug">
+                <div className="mt-1.5 text-sm text-white/65 leading-snug">
                   {s.label}
                 </div>
               </div>
@@ -147,15 +154,33 @@ export function Hero() {
           ))}
         </div>
 
-        {/* Scroll indicator */}
-        <div className="mt-10 flex justify-center">
-          <div
-            aria-hidden
-            className="h-10 w-6 rounded-full border border-white/25 flex items-start justify-center p-1.5"
+        {/* Scroll invitation — prominent, animated, clickable */}
+        <ScrollReveal delay={420}>
+          <button
+            onClick={handleScroll}
+            aria-label="Scroll down"
+            className="mt-10 mx-auto flex flex-col items-center gap-2 group cursor-pointer"
+            style={{ background: "none", border: "none" }}
           >
-            <span className="h-2 w-1 rounded-full bg-white/55 prs-scroll-dot" />
-          </div>
-        </div>
+            <span
+              className="text-[11px] font-semibold uppercase tracking-[0.18em] transition-colors group-hover:text-white"
+              style={{ color: "rgba(255,255,255,0.35)" }}
+            >
+              See who trusts us
+            </span>
+            {/* Animated chevrons — staggered bounce draws the eye down */}
+            <span className="flex flex-col items-center" aria-hidden>
+              <ChevronDown
+                className="h-4 w-4 prs-chevron-1"
+                style={{ color: TEAL, opacity: 0.9 }}
+              />
+              <ChevronDown
+                className="h-4 w-4 -mt-2 prs-chevron-2"
+                style={{ color: TEAL, opacity: 0.5 }}
+              />
+            </span>
+          </button>
+        </ScrollReveal>
       </div>
     </section>
   );
