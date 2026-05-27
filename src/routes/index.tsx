@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Hero } from "@/components/paarsiv/sections/Hero";
 import { BrandsStrip } from "@/components/paarsiv/sections/BrandsStrip";
+import { ClientVoice } from "@/components/paarsiv/sections/ClientVoice";
 import { WhyPaarsiv } from "@/components/paarsiv/sections/WhyPaarsiv";
 import { CapabilitiesPreview } from "@/components/paarsiv/sections/CapabilitiesPreview";
-import { Testimonials } from "@/components/paarsiv/sections/Testimonials";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -24,9 +24,9 @@ function HomePage() {
     <>
       <Hero />
       <BrandsStrip />
+      <ClientVoice />
       <WhyPaarsiv />
       <CapabilitiesPreview />
-      <Testimonials />
     </>
   );
 }

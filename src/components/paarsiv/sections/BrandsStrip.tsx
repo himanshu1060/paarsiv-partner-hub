@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { Link } from "@tanstack/react-router";
-import { ArrowRight, Linkedin } from "lucide-react";
 import { BRANDS, type Brand } from "@/data/brands";
-import { TESTIMONIALS } from "@/data/testimonials";
 import { TEAL } from "../theme";
 
 /* ── Brand logo with real image + initials fallback ─────────────────── */
@@ -167,92 +164,7 @@ export function BrandsStrip() {
         </div>
       </div>
 
-      {/* ── Testimonial cards ─────────────────────────────────────────── */}
-      <div className="mx-auto max-w-7xl px-6 pt-16 pb-20 lg:pb-28">
-        <div className="grid md:grid-cols-3 gap-5">
-          {TESTIMONIALS.map((t) => (
-            <div
-              key={t.initials}
-              className="flex flex-col rounded-2xl overflow-hidden"
-              style={{
-                background: "#fff",
-                border: "1px solid rgba(255,255,255,0.12)",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.28)",
-              }}
-            >
-              {/* Header — avatar + name + LinkedIn */}
-              <div className="flex items-center gap-3 px-5 pt-5 pb-4" style={{ borderBottom: "1px solid #F1F5F9" }}>
-                {t.photoUrl ? (
-                  <img
-                    src={t.photoUrl}
-                    alt={t.name}
-                    className="rounded-xl object-cover flex-shrink-0"
-                    style={{ width: 52, height: 52 }}
-                  />
-                ) : (
-                  <div
-                    className="flex items-center justify-center rounded-xl flex-shrink-0 text-white font-bold text-sm"
-                    style={{
-                      width: 52,
-                      height: 52,
-                      background: t.initials === "MD" ? "#1A5276" : t.initials === "CTO" ? "#117A65" : "#6D214F",
-                    }}
-                  >
-                    {t.initials}
-                  </div>
-                )}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <span className="font-bold text-[#0D1B2A] text-sm truncate">{t.name}</span>
-                    <a
-                      href={t.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-shrink-0"
-                      aria-label="LinkedIn profile"
-                    >
-                      <Linkedin className="h-4 w-4" style={{ color: "#0A66C2" }} fill="#0A66C2" />
-                    </a>
-                  </div>
-                  <p className="text-xs text-[#64748B] mt-0.5 truncate">{t.role}</p>
-                  <p className="text-xs font-semibold mt-0.5 truncate" style={{ color: TEAL }}>{t.company}</p>
-                </div>
-              </div>
-
-              {/* Quote */}
-              <div className="flex-1 px-5 py-4" style={{ background: "#F8FAFC" }}>
-                <p className="text-sm text-[#374151] leading-relaxed">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-              </div>
-
-              {/* Footer */}
-              <div className="px-5 py-4" style={{ borderTop: "1px solid #F1F5F9" }}>
-                <a
-                  href={t.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold transition-opacity hover:opacity-75"
-                  style={{ color: "#0A66C2" }}
-                >
-                  Read on LinkedIn
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-10 flex justify-center">
-          <Link
-            to="/testimonials"
-            className="inline-flex items-center gap-2 rounded-[10px] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5"
-            style={{ background: TEAL }}
-          >
-            Check All Testimonials <ArrowRight style={{ width: 16, height: 16 }} />
-          </Link>
-        </div>
-      </div>
+      <div className="pb-14 lg:pb-20" />
     </section>
   );
 }
