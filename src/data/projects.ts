@@ -67,10 +67,10 @@ export const PROJECTS: Project[] = [
     name: "D'Decor",
     industry: "Home Textiles & Décor",
     clouds: ["SFMC", "Journey Builder", "SMS", "WhatsApp"],
-    category: "SFMC",
+    category: "MCP",
     impact: [
-      "Built end-to-end customer lifecycle journeys across email, SMS, and WhatsApp",
-      "Unified retail and online customer data for personalised campaign delivery",
+      "Deployed MCP for real-time personalisation across showroom and e-commerce touchpoints",
+      "Unified retail and online customer data for behaviour-driven campaign delivery",
       "Automated post-purchase and re-engagement workflows at scale",
     ],
     challenge:
@@ -91,8 +91,8 @@ export const PROJECTS: Project[] = [
     slug: "asian-footwear",
     name: "Asian Footwear",
     industry: "Fashion & Footwear",
-    clouds: ["Sales Cloud", "SFMC", "WhatsApp"],
-    category: "Sales Cloud",
+    clouds: ["MCP", "SFMC", "WhatsApp"],
+    category: "MCP",
     impact: [
       "Implemented Sales Cloud with full distribution channel visibility",
       "Automated dealer onboarding and order management workflows",
@@ -110,6 +110,81 @@ export const PROJECTS: Project[] = [
       { metric: "100%", label: "Dealer Pipeline Visibility" },
       { metric: "↓ 60%", label: "Onboarding Cycle Time" },
       { metric: "Live", label: "Regional Dashboards" },
+    ],
+  },
+  {
+    slug: "biba",
+    name: "BIBA",
+    industry: "Women's Fashion",
+    clouds: ["SFMC", "Data Cloud", "Journey Builder", "WhatsApp"],
+    category: "SFMC",
+    impact: [
+      "Unified online and retail customer profiles in Data Cloud for personalised marketing",
+      "Built segmented SFMC journeys for ethnic wear collections and seasonal drops",
+      "Deployed WhatsApp and email campaigns tied to real-time purchase signals",
+    ],
+    challenge:
+      "Customer data from retail stores, the BIBA app, and the website existed in separate silos, making it impossible to deliver consistent personalised experiences across touchpoints.",
+    approach: [
+      "Ingested retail POS, app events, and web behaviour into Data Cloud",
+      "Built identity resolution to create a single customer view across channels",
+      "Designed collection-launch and replenishment journeys in SFMC",
+      "Deployed AI-driven segmentation for high-value and lapsing customers",
+    ],
+    outcomes: [
+      { metric: "Unified", label: "Customer 360 View" },
+      { metric: "+35%", label: "Campaign Engagement" },
+      { metric: "↓ 45%", label: "Lapsing Customer Rate" },
+    ],
+  },
+  {
+    slug: "income",
+    name: "Income",
+    industry: "Insurance / Financial Services",
+    clouds: ["MCP", "SFMC", "Journey Builder"],
+    category: "MCP",
+    impact: [
+      "Deployed Marketing Cloud Personalisation for real-time web and portal experiences",
+      "Personalised policy renewal nudges and cross-sell recommendations per customer segment",
+      "Reduced generic bulk sends in favour of behaviour-triggered journeys",
+    ],
+    challenge:
+      "Undifferentiated email blasts were driving low renewal engagement, and the customer portal showed the same content to every visitor regardless of life stage or policy type.",
+    approach: [
+      "Implemented MCP to capture real-time behavioural signals on the web portal",
+      "Built segment rules mapping life stage, policy type, and renewal proximity",
+      "Created personalised landing experiences and triggered SFMC journeys from MCP events",
+      "A/B tested personalised vs. generic journeys across renewal and cross-sell flows",
+    ],
+    outcomes: [
+      { metric: "+28%", label: "Renewal Conversion Rate" },
+      { metric: "Real-time", label: "Portal Personalisation" },
+      { metric: "↓ 40%", label: "Generic Bulk Sends" },
+    ],
+  },
+  {
+    slug: "imda",
+    name: "IMDA",
+    industry: "Government / Public Sector",
+    clouds: ["MCP", "SFMC", "CloudPages"],
+    category: "MCP",
+    impact: [
+      "Implemented MCP-driven personalisation for citizen-facing digital campaigns",
+      "Tailored content delivery by industry segment, role, and engagement history",
+      "Improved campaign relevance and digital programme adoption across target sectors",
+    ],
+    challenge:
+      "Digital communications were reaching diverse industry segments with uniform messaging, leading to low relevance scores and limited programme uptake among key stakeholder groups.",
+    approach: [
+      "Configured MCP to track segment-level engagement across web and email",
+      "Built behavioural rules to surface relevant digital programmes per stakeholder profile",
+      "Integrated MCP signals into SFMC journeys for follow-up communications",
+      "Developed CloudPages-based programme registration flows tied to MCP segments",
+    ],
+    outcomes: [
+      { metric: "+52%", label: "Programme Adoption Rate" },
+      { metric: "Segmented", label: "Stakeholder Journeys" },
+      { metric: "Compliant", label: "Government Data Governance" },
     ],
   },
   {

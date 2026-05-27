@@ -69,8 +69,8 @@ function BrandCard({ brand }: { brand: Brand }) {
 
 /* ── Stats ───────────────────────────────────────────────────────────── */
 const STATS = [
-  { value: "11+", label: "Brand Clients" },
-  { value: "8", label: "Industries" },
+  { value: "14+", label: "Brand Clients" },
+  { value: "9", label: "Industries" },
   { value: "15+", label: "Live Projects" },
 ];
 

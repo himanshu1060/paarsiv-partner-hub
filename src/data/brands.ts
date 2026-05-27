@@ -18,8 +18,11 @@ export const BRANDS: Brand[] = [
   { name: "Goel Power",  initials: "GP",  color: "#117A65", logoUrl: null },
   { name: "KLM",         initials: "KLM", color: "#7D3C98", logoUrl: "https://logo.clearbit.com/klmjewellers.com" },
   { name: "Fabel",       initials: "FAB", color: "#1B4F72", logoUrl: null },
+  { name: "BIBA",        initials: "BIBA", color: "#C0392B", logoUrl: "https://logo.clearbit.com/biba.in" },
+  { name: "Income",      initials: "INC",  color: "#1A5276", logoUrl: "https://logo.clearbit.com/income.com.sg" },
   // ── Recency anchors — seen last, remembered second-most ──
-  { name: "D'Decor",     initials: "DD",  color: "#B7410E", logoUrl: "https://logo.clearbit.com/ddecor.com" },
-  { name: "Axtria",      initials: "AXT", color: "#1F618D", logoUrl: "https://logo.clearbit.com/axtria.com" },
+  { name: "D'Decor",     initials: "DD",   color: "#B7410E", logoUrl: "https://logo.clearbit.com/ddecor.com" },
+  { name: "Axtria",      initials: "AXT",  color: "#1F618D", logoUrl: "https://logo.clearbit.com/axtria.com" },
+  { name: "IMDA",        initials: "IMDA", color: "#117A65", logoUrl: "https://logo.clearbit.com/imda.gov.sg" },
   { name: "Asian Footwear", initials: "AF", color: "#0E6655", logoUrl: null },
 ];
