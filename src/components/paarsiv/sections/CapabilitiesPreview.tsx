@@ -3,6 +3,18 @@ import { ArrowRight, Check } from "lucide-react";
 import { TEAL, NAVY } from "../theme";
 import { SectionHeader } from "../SectionHeader";
 import { ScrollReveal } from "../ScrollReveal";
+
+const OUTCOME_CHIPS = [
+  "60% → 95% Deliverability",
+  "HIPAA-Compliant Build",
+  "Full Campaign Engine",
+];
+
+const AVATARS = [
+  { initials: "MD", bg: "#1A5276" },
+  { initials: "CTO", bg: "#117A65" },
+  { initials: "HD", bg: "#6D214F" },
+] as const;
 import { CAPABILITIES } from "@/data/capabilities";
 
 export function CapabilitiesPreview() {
@@ -75,14 +87,72 @@ export function CapabilitiesPreview() {
             );
           })}
         </div>
-        <div className="mt-12 flex justify-center">
-          <Link
-            to="/solutions"
-            className="inline-flex items-center gap-2 rounded-[10px] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90"
-            style={{ backgroundColor: TEAL }}
+        {/* Testimonial CTA — replaces plain nav button; social proof drives higher click-through */}
+        <div className="mt-14 flex justify-center">
+          <div
+            className="w-full max-w-md rounded-2xl px-8 py-8 text-center"
+            style={{
+              background: NAVY,
+              border: "1px solid rgba(27,202,155,0.18)",
+              boxShadow: "0 20px 60px rgba(13,27,42,0.18)",
+            }}
           >
-            Explore All Solutions <ArrowRight className="h-4 w-4" />
-          </Link>
+            {/* Stacked avatars */}
+            <div className="flex justify-center mb-5">
+              <div className="flex items-center -space-x-2.5">
+                {AVATARS.map(({ initials, bg }, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-center rounded-full border-2 text-white font-bold text-[11px]"
+                    style={{
+                      width: 44,
+                      height: 44,
+                      background: bg,
+                      borderColor: NAVY,
+                      zIndex: 3 - i,
+                    }}
+                  >
+                    {initials}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p
+              className="text-white font-bold text-[22px] leading-snug"
+              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+            >
+              What happened when they<br />partnered with Paarsiv?
+            </p>
+            <p className="mt-2 text-white/45 text-sm">
+              3 clients. Real outcomes. No fluff.
+            </p>
+
+            {/* Outcome chips */}
+            <div className="mt-5 flex flex-wrap justify-center gap-2">
+              {OUTCOME_CHIPS.map((chip) => (
+                <span
+                  key={chip}
+                  className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold"
+                  style={{
+                    background: "rgba(27,202,155,0.1)",
+                    border: "1px solid rgba(27,202,155,0.22)",
+                    color: TEAL,
+                  }}
+                >
+                  ✓ {chip}
+                </span>
+              ))}
+            </div>
+
+            <Link
+              to="/testimonials"
+              className="mt-7 flex items-center justify-center gap-2 rounded-xl w-full py-4 text-base font-bold text-white transition-all hover:opacity-90 hover:-translate-y-0.5"
+              style={{ background: TEAL }}
+            >
+              Read Their Stories <ArrowRight style={{ width: 18, height: 18 }} />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

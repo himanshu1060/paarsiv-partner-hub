@@ -11,6 +11,32 @@ export type Project = {
 };
 
 export const PROJECTS: Project[] = [
+  // ── Premium anchors first (primacy effect — most recognizable brands) ──
+  {
+    slug: "mount-sinai",
+    name: "Mount Sinai",
+    industry: "Healthcare / Non-Profit",
+    clouds: ["SFMC", "CloudPages", "Content Builder"],
+    category: "SFMC",
+    impact: [
+      "Delivered HIPAA & CAN-SPAM compliant email templates",
+      "Built branded preference centre with compliant unsubscribe routing",
+      "Optimised responsive templates across all major email clients",
+    ],
+    challenge:
+      "Outdated email templates were failing accessibility audits and lacked HIPAA-aligned preference management.",
+    approach: [
+      "Audited existing templates against HIPAA & CAN-SPAM checklists",
+      "Built modular responsive email components in Content Builder",
+      "Designed branded preference centre on CloudPages",
+      "Implemented audit logging for subscription changes",
+    ],
+    outcomes: [
+      { metric: "100%", label: "Compliance Pass Rate" },
+      { metric: "All Major", label: "Email Clients Supported" },
+      { metric: "<3s", label: "Preference Page Load" },
+    ],
+  },
   {
     slug: "fnp",
     name: "FnP",
@@ -34,6 +60,56 @@ export const PROJECTS: Project[] = [
       { metric: "100%", label: "WhatsApp Click Visibility" },
       { metric: "3x", label: "Reporting Speed" },
       { metric: "0", label: "Manual Reconciliation Hours" },
+    ],
+  },
+  {
+    slug: "ddecor",
+    name: "D'Decor",
+    industry: "Home Textiles & Décor",
+    clouds: ["SFMC", "Journey Builder", "SMS", "WhatsApp"],
+    category: "SFMC",
+    impact: [
+      "Built end-to-end customer lifecycle journeys across email, SMS, and WhatsApp",
+      "Unified retail and online customer data for personalised campaign delivery",
+      "Automated post-purchase and re-engagement workflows at scale",
+    ],
+    challenge:
+      "Customer interactions across retail showrooms and e-commerce were siloed, preventing consistent brand communication and lifecycle marketing.",
+    approach: [
+      "Mapped full customer lifecycle from first visit to loyalty programme",
+      "Built unified Data Extensions syncing retail POS and online behaviour",
+      "Orchestrated multi-channel journeys in Journey Builder",
+      "Deployed personalised post-purchase sequences via SMS and WhatsApp",
+    ],
+    outcomes: [
+      { metric: "+42%", label: "Repeat Purchase Rate" },
+      { metric: "Unified", label: "Customer Profile" },
+      { metric: "3x", label: "Journey Touchpoints" },
+    ],
+  },
+  {
+    slug: "asian-footwear",
+    name: "Asian Footwear",
+    industry: "Fashion & Footwear",
+    clouds: ["Sales Cloud", "SFMC", "WhatsApp"],
+    category: "Sales Cloud",
+    impact: [
+      "Implemented Sales Cloud with full distribution channel visibility",
+      "Automated dealer onboarding and order management workflows",
+      "Integrated SFMC for post-sale communication and reorder nudges",
+    ],
+    challenge:
+      "Rapid retail expansion across zones had outpaced the existing manual tracking system, creating blind spots in dealer performance and inventory flow.",
+    approach: [
+      "Configured Sales Cloud with territory hierarchy matching distribution zones",
+      "Built automated dealer onboarding flows with approval routing",
+      "Connected SFMC for transactional WhatsApp updates on order status",
+      "Delivered dashboards for regional sales managers and leadership",
+    ],
+    outcomes: [
+      { metric: "100%", label: "Dealer Pipeline Visibility" },
+      { metric: "↓ 60%", label: "Onboarding Cycle Time" },
+      { metric: "Live", label: "Regional Dashboards" },
     ],
   },
   {
@@ -84,31 +160,6 @@ export const PROJECTS: Project[] = [
       { metric: "100%", label: "Channel Attribution Coverage" },
       { metric: "Weekly", label: "Automated Exec Reports" },
       { metric: "1", label: "Source of Truth" },
-    ],
-  },
-  {
-    slug: "mount-sinai",
-    name: "Mount Sinai",
-    industry: "Healthcare / Non-Profit",
-    clouds: ["SFMC", "CloudPages", "Content Builder"],
-    category: "SFMC",
-    impact: [
-      "Delivered HIPAA & CAN-SPAM compliant email templates",
-      "Built branded preference centre with compliant unsubscribe routing",
-      "Optimised responsive templates across all major email clients",
-    ],
-    challenge:
-      "Outdated email templates were failing accessibility audits and lacked HIPAA-aligned preference management.",
-    approach: [
-      "Audited existing templates against HIPAA & CAN-SPAM checklists",
-      "Built modular responsive email components in Content Builder",
-      "Designed branded preference centre on CloudPages",
-      "Implemented audit logging for subscription changes",
-    ],
-    outcomes: [
-      { metric: "100%", label: "Compliance Pass Rate" },
-      { metric: "All Major", label: "Email Clients Supported" },
-      { metric: "<3s", label: "Preference Page Load" },
     ],
   },
   {
