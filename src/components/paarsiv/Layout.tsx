@@ -4,6 +4,7 @@ import { ArrowRight, Menu, X, Linkedin, Mail } from "lucide-react";
 import { LOGO_DARK, LOGO_WHITE, TEAL, NAVY } from "./theme";
 
 const NAV_LINKS = [
+  { label: "Home", to: "/" },
   { label: "Projects", to: "/projects" },
   { label: "Our Team", to: "/team" },
   { label: "Industries", to: "/industries" },
