@@ -19,7 +19,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Co-sell with Paarsiv. We work directly with Salesforce AEs to deliver implementation excellence for your clients.",
+          "Get in touch with Paarsiv. We deliver Salesforce implementation excellence across Marketing Cloud, Sales Cloud, Data Cloud, and MCP.",
       },
     ],
   }),
@@ -32,23 +32,25 @@ const CLOUD_OPTIONS = [
   "MCP",
   "Tableau",
   "Integrations",
+  "Not sure yet",
+  "Other",
 ];
 
 const TRUST_ITEMS = [
   {
     icon: Clock,
     label: "Response within 24 hours",
-    sub: "We respect your time and your client's timeline.",
+    sub: "We respect your time and your timeline.",
   },
   {
     icon: UserCheck,
-    label: "Dedicated AE Liaison",
-    sub: "One point of contact. Always.",
+    label: "Dedicated Project Lead",
+    sub: "One point of contact from kickoff to delivery.",
   },
   {
     icon: FileLock2,
     label: "NDA Available on Request",
-    sub: "Client confidentiality is our default.",
+    sub: "Your confidentiality is our default.",
   },
 ];
 
@@ -110,17 +112,16 @@ function ContactPage() {
               style={{ color: TEAL }}
             >
               <span className="h-px w-8" style={{ background: TEAL }} />
-              Partner With Us
+              Get In Touch
             </div>
             <h1
               className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.08]"
               style={{ fontFamily: "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif" }}
             >
-              Ready to Co-Sell with Paarsiv?
+              Let's Build Something Together
             </h1>
             <p className="mt-5 text-white/65 text-lg leading-relaxed">
-              We work directly with Salesforce AEs to deliver implementation
-              excellence for your clients. Let's talk.
+              Whether you have a live Salesforce project, an idea you're exploring, or just want to understand what's possible — we're happy to talk.
             </p>
 
             <div className="mt-10 space-y-3">
@@ -193,7 +194,7 @@ function ContactPage() {
                     We'll be in touch within 24 hours.
                   </h3>
                   <p className="mt-3 text-[#6B7280]">
-                    A Paarsiv lead will respond directly with next steps.
+                    Someone from our team will reach out directly within 24 hours.
                   </p>
                 </div>
               ) : (
@@ -206,7 +207,7 @@ function ContactPage() {
 
                   <div className="sm:col-span-2">
                     <label className="block text-sm font-medium text-[#0D1B2A] mb-2">
-                      Salesforce Cloud(s) of Interest
+                      Area of Interest
                     </label>
                     <div className="flex flex-wrap gap-2">
                       {CLOUD_OPTIONS.map((c) => {
@@ -255,7 +256,7 @@ function ContactPage() {
                         <span className="inline-block h-4 w-4 rounded-full border-2 border-white/40 border-t-white animate-spin" />
                       ) : (
                         <>
-                          Let's Partner <ArrowRight className="h-4 w-4" />
+                          Send Message <ArrowRight className="h-4 w-4" />
                         </>
                       )}
                     </button>
