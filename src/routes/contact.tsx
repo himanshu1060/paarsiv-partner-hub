@@ -39,7 +39,7 @@ const CLOUD_OPTIONS = [
 const TRUST_ITEMS = [
   {
     icon: Clock,
-    label: "Response within 24 hours",
+    label: "Response within 72 hours",
     sub: "We respect your time and your timeline.",
   },
   {
@@ -191,10 +191,10 @@ function ContactPage() {
                     className="mt-5 text-2xl font-bold text-[#0D1B2A]"
                     style={{ fontFamily: "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif" }}
                   >
-                    We'll be in touch within 24 hours.
+                    We'll be in touch within 72 hours.
                   </h3>
                   <p className="mt-3 text-[#6B7280]">
-                    Someone from our team will reach out directly within 24 hours.
+                    Someone from our team will reach out directly within 72 hours.
                   </p>
                 </div>
               ) : (
