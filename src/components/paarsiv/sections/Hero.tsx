@@ -66,7 +66,7 @@ function ParticleField() {
 export function Hero() {
   return (
     <section
-      className="relative pt-36 pb-24 lg:pt-44 lg:pb-32 overflow-hidden"
+      className="relative pt-36 pb-12 lg:pt-44 lg:pb-16 overflow-hidden"
       style={{ backgroundColor: NAVY }}
     >
       <ParticleField />
@@ -148,7 +148,7 @@ export function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="mt-20 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <div
             aria-hidden
             className="h-10 w-6 rounded-full border border-white/25 flex items-start justify-center p-1.5"
