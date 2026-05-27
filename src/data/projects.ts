@@ -8,6 +8,8 @@ export type Project = {
   approach: string[];
   outcomes: { metric: string; label: string }[];
   category: "SFMC" | "Sales Cloud" | "Data Cloud" | "MCP" | "Integrations";
+  brandSummary?: string;
+  brandFacts?: string[];
 };
 
 export const PROJECTS: Project[] = [
@@ -18,6 +20,8 @@ export const PROJECTS: Project[] = [
     industry: "Healthcare / Non-Profit",
     clouds: ["SFMC", "CloudPages", "Content Builder"],
     category: "SFMC",
+    brandSummary: "Mount Sinai Health System is one of the largest and most respected academic medical centres in the United States, headquartered in New York City. With a legacy spanning over 170 years, it operates eight hospitals and a vast network of ambulatory care sites, research institutes, and specialty practices. Mount Sinai is globally recognised for its clinical excellence, groundbreaking medical research, and commitment to patient-centred care — making compliance, accessibility, and communication held to the highest possible standard.",
+    brandFacts: ["170+ year legacy", "8 hospitals in the network", "Top-ranked in the US News Best Hospitals list"],
     impact: [
       "Delivered HIPAA & CAN-SPAM compliant email templates",
       "Built branded preference centre with compliant unsubscribe routing",
@@ -43,6 +47,8 @@ export const PROJECTS: Project[] = [
     industry: "Retail & Gifting",
     clouds: ["SFMC", "AWS", "CleverTap", "WhatsApp Meta"],
     category: "Integrations",
+    brandSummary: "Ferns N Petals (FnP) is India's largest gifting and floral retail network, with a presence spanning 400+ stores across India and operations in 70+ countries. Founded in 1994, FnP has grown from a single flower shop in Delhi into a gifting powerhouse that processes millions of orders annually across flowers, cakes, plants, and personalised gifts. The brand serves both B2C consumers and large enterprise clients, running high-volume campaigns across every major messaging channel.",
+    brandFacts: ["400+ retail stores across India", "Operating in 70+ countries", "Millions of orders processed annually"],
     impact: [
       "Automated WhatsApp click tracking with CloudPage-based solution",
       "Integrated CleverTap ↔ SFMC via AWS middleware APIs",
@@ -68,6 +74,8 @@ export const PROJECTS: Project[] = [
     industry: "Home Textiles & Décor",
     clouds: ["SFMC", "Journey Builder", "SMS", "WhatsApp"],
     category: "MCP",
+    brandSummary: "D'Decor is India's most premium home textiles brand, renowned for its luxury fabrics, wallcoverings, and furnishings that grace the interiors of five-star hotels, luxury residences, and high-end retail spaces across 75+ countries. Backed by decades of craftsmanship and a world-class manufacturing infrastructure, D'Decor supplies to some of the most iconic hospitality and design projects globally. The brand's digital ambitions are as ambitious as its product portfolio.",
+    brandFacts: ["Present in 75+ countries", "Supplies to 5-star hotels worldwide", "India's #1 premium home textiles brand"],
     impact: [
       "Deployed MCP for real-time personalisation across showroom and e-commerce touchpoints",
       "Unified retail and online customer data for behaviour-driven campaign delivery",
@@ -93,6 +101,8 @@ export const PROJECTS: Project[] = [
     industry: "Fashion & Footwear",
     clouds: ["MCP", "SFMC", "WhatsApp"],
     category: "MCP",
+    brandSummary: "Asian Footwear is a rapidly growing Indian footwear brand known for its wide range of sports and casual footwear at accessible price points. With an expanding distribution network spanning multiple states and thousands of retail touchpoints, the brand has become a strong challenger in India's competitive footwear market. Its aggressive retail expansion across zones demanded an equally robust operational and communication infrastructure to match.",
+    brandFacts: ["Pan-India distribution network", "Thousands of retail touchpoints", "One of India's fastest-growing footwear brands"],
     impact: [
       "Implemented Sales Cloud with full distribution channel visibility",
       "Automated dealer onboarding and order management workflows",
@@ -118,6 +128,8 @@ export const PROJECTS: Project[] = [
     industry: "Women's Fashion",
     clouds: ["SFMC", "Data Cloud", "Journey Builder", "WhatsApp"],
     category: "SFMC",
+    brandSummary: "BIBA is India's largest and most beloved women's ethnic wear brand, trusted by millions of women for its vibrant kurtas, salwar suits, and fusion wear. With over 200 exclusive stores across India and a thriving e-commerce presence, BIBA has become synonymous with modern Indian fashion — blending traditional craftsmanship with contemporary design. The brand serves a highly engaged, fashion-conscious customer base that shops both online and in-store, making unified data and personalised journeys critical to its growth.",
+    brandFacts: ["200+ exclusive stores across India", "India's #1 women's ethnic wear brand", "Millions of active customers across retail and e-commerce"],
     impact: [
       "Unified online and retail customer profiles in Data Cloud for personalised marketing",
       "Built segmented SFMC journeys for ethnic wear collections and seasonal drops",
@@ -143,6 +155,8 @@ export const PROJECTS: Project[] = [
     industry: "Insurance / Financial Services",
     clouds: ["MCP", "SFMC", "Journey Builder"],
     category: "MCP",
+    brandSummary: "Income Insurance (formerly NTUC Income) is one of Singapore's most trusted and iconic insurance institutions, serving over 2 million policyholders across life, health, and general insurance. Founded in 1970 as a cooperative, Income has a deep-rooted mission to make insurance accessible to every Singaporean. Its scale, regulatory environment, and the high-stakes nature of insurance communications demand exceptional precision in how it connects with customers — from policy renewals to cross-sell and life-stage transitions.",
+    brandFacts: ["2 million+ policyholders", "Founded 1970, over 50 years of trust", "One of Singapore's largest composite insurers"],
     impact: [
       "Deployed Marketing Cloud Personalisation for real-time web and portal experiences",
       "Personalised policy renewal nudges and cross-sell recommendations per customer segment",
@@ -168,6 +182,8 @@ export const PROJECTS: Project[] = [
     industry: "Government / Public Sector",
     clouds: ["MCP", "SFMC", "CloudPages"],
     category: "MCP",
+    brandSummary: "The Infocomm Media Development Authority (IMDA) is Singapore's lead government agency for developing a vibrant, world-class infocomm and media ecosystem. Operating under the Singapore Ministry of Communications and Information, IMDA drives Singapore's Smart Nation vision — shaping digital infrastructure policy, regulating key sectors, and running programmes that accelerate digital adoption across industries and communities. Working with IMDA meant meeting the highest standards of government data governance while reaching diverse stakeholder segments at national scale.",
+    brandFacts: ["Singapore government statutory board", "Drives Singapore's Smart Nation initiative", "Oversees infocomm policy across all industries"],
     impact: [
       "Implemented MCP-driven personalisation for citizen-facing digital campaigns",
       "Tailored content delivery by industry segment, role, and engagement history",
@@ -192,6 +208,8 @@ export const PROJECTS: Project[] = [
     name: "Fabel",
     industry: "E-commerce",
     clouds: ["SFMC", "Journey Builder", "IP Warmup"],
+    brandSummary: "Fabel is a growing e-commerce brand operating in a competitive digital retail landscape where email deliverability directly determines revenue. Like many scaling online retailers, Fabel faced the critical challenge of establishing sending reputation with major mailbox providers — a problem that silently costs brands millions in lost reach before they realise it.",
+    brandFacts: ["E-commerce brand scaling email operations", "High-volume digital marketing programme", "Multi-region mailbox provider coverage"],
     category: "SFMC",
     impact: [
       "Executed structured IP warmup with domain-segmented datasets",
@@ -217,6 +235,8 @@ export const PROJECTS: Project[] = [
     name: "Cobb Italy",
     industry: "Retail (International)",
     clouds: ["SFMC", "SMS", "WhatsApp", "Tableau"],
+    brandSummary: "Cobb Italy is an international retail brand operating across multiple markets, running high-frequency SMS and WhatsApp campaigns alongside traditional email. With marketing leadership accountable to cross-channel ROI targets, the brand needed the kind of multi-channel attribution and executive reporting infrastructure that most agencies struggle to deliver cleanly.",
+    brandFacts: ["Multi-market international retail brand", "High-frequency SMS + WhatsApp campaigns", "Cross-channel attribution reporting for leadership"],
     category: "SFMC",
     impact: [
       "Built multi-DE SQL architecture for multi-channel attribution",
@@ -242,6 +262,8 @@ export const PROJECTS: Project[] = [
     name: "Ramraj",
     industry: "Clothing & Fashion",
     clouds: ["SFMC", "ENS", "SMS", "WhatsApp"],
+    brandSummary: "Ramraj Cotton is one of India's most trusted and widely recognised ethnic menswear brands, known for its premium dhotis, veshtis, and cotton apparel with a particularly strong following across South India. With a loyal customer base running into millions and a high-volume communication programme spanning SMS and WhatsApp, reliable message delivery is not just a nice-to-have — it is core to the brand's customer experience.",
+    brandFacts: ["One of India's most recognised ethnic menswear brands", "Dominant presence across South India", "Millions of loyal customers nationwide"],
     category: "SFMC",
     impact: [
       "Built real-time WhatsApp → SMS fallback using ENS event triggers",
@@ -267,6 +289,8 @@ export const PROJECTS: Project[] = [
     name: "Meridian",
     industry: "Internal Operations",
     clouds: ["SFMC", "CloudPages", "Data Extensions"],
+    brandSummary: "Meridian is an internal operations intelligence platform built for a growing organisation where manual end-of-day reporting had become a bottleneck for leadership visibility. As teams scaled, the need for a real-time, auditable task tracking system became critical — prompting a fully custom solution built on Salesforce's CloudPages and Data Extensions infrastructure.",
+    brandFacts: ["Custom internal operations platform", "Built on Salesforce CloudPages", "Real-time audit trail for leadership"],
     category: "SFMC",
     impact: [
       "Replaced manual task tracking with form-based live dashboard system",
@@ -292,6 +316,8 @@ export const PROJECTS: Project[] = [
     name: "KLM",
     industry: "Jewellery & Fashion",
     clouds: ["SFMC", "APIs", "Webhooks", "ENS"],
+    brandSummary: "KLM Jewellers is an established jewellery and fashion retailer running active WhatsApp campaign programmes to engage its customer base. As a brand where trust and communication quality directly influence high-value purchasing decisions, having real-time visibility into campaign delivery and CRM integration is essential to maintaining the premium customer experience their clientele expects.",
+    brandFacts: ["Established jewellery and fashion retailer", "High-value purchase environment", "Active WhatsApp and CRM-integrated campaigns"],
     category: "Integrations",
     impact: [
       "Exposed SFMC templates via API for seamless CRM visibility",
@@ -317,6 +343,8 @@ export const PROJECTS: Project[] = [
     name: "Goel Power",
     industry: "Manufacturing",
     clouds: ["Sales Cloud", "Data Cloud"],
+    brandSummary: "Goel Power is a manufacturing company in the power and electrical sector embarking on a full Salesforce implementation from a greenfield state. For businesses in capital-intensive manufacturing, getting the data model, approval workflows, and access governance right from day one is business-critical — mistakes at this stage compound into costly re-implementations.",
+    brandFacts: ["Power & electrical manufacturing sector", "Greenfield Salesforce implementation", "Multi-stakeholder approval and governance requirements"],
     category: "Sales Cloud",
     impact: [
       "Configured Salesforce Flows and role hierarchy from scratch",
@@ -342,6 +370,8 @@ export const PROJECTS: Project[] = [
     name: "Monte Carlo",
     industry: "Fashion",
     clouds: ["Sales Cloud", "Tableau"],
+    brandSummary: "Monte Carlo is one of India's most iconic winter wear and fashion brands, with over 350 exclusive stores across the country and a strong wholesale distribution network. Known for its premium woolens, knitwear, and casual wear, Monte Carlo has built a loyal following over four decades. Managing sales pipeline and case routing at this scale demanded real-time visibility that the existing system simply could not provide.",
+    brandFacts: ["350+ exclusive stores across India", "40+ years of brand heritage", "Premium woolens and fashion leader"],
     category: "Sales Cloud",
     impact: [
       "Built live Tableau dashboards for sales tracking",
@@ -367,6 +397,8 @@ export const PROJECTS: Project[] = [
     name: "Axtria",
     industry: "IT Services / B2B",
     clouds: ["Sales Cloud", "Data Cloud"],
+    brandSummary: "Axtria is a global analytics and technology company specialising in data-driven solutions for the life sciences industry, with clients spanning leading pharmaceutical, biotech, and medical device companies worldwide. Operating across multiple geographies with complex sales structures, Axtria required enterprise-grade Salesforce architecture that could handle multi-region access governance and deliver a unified customer view across its global operations.",
+    brandFacts: ["Global analytics company in life sciences", "Clients include leading pharma and biotech firms", "Multi-region sales operations across geographies"],
     category: "Data Cloud",
     impact: [
       "Implemented enterprise-grade role hierarchy and access governance",
@@ -392,6 +424,8 @@ export const PROJECTS: Project[] = [
     name: "Education Client",
     industry: "Education",
     clouds: ["SFMC", "Journey Builder"],
+    brandSummary: "A growing education institution managing student onboarding across multiple programmes and cohorts, where communication quality directly influences enrolment experience and brand perception. In the education sector, where students and parents form lasting impressions from day one, personalised, timely, and compliant communication is not optional — it is foundational.",
+    brandFacts: ["Multi-programme education institution", "High-volume student onboarding journeys", "Compliance-first communication requirements"],
     category: "SFMC",
     impact: [
       "Automated student onboarding journeys across email and WhatsApp",

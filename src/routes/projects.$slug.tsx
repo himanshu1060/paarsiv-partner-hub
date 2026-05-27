@@ -81,6 +81,57 @@ function ProjectDetailPage() {
       {/* Content */}
       <section className="py-20 lg:py-24 bg-white">
         <div className="mx-auto max-w-5xl px-6">
+
+          {/* Brand background — shown when brandSummary exists */}
+          {project.brandSummary && (
+            <ScrollReveal>
+              <div
+                className="mb-14 rounded-2xl p-8"
+                style={{
+                  background: "linear-gradient(135deg, #F0FDF8 0%, #F8FAFC 100%)",
+                  border: `1px solid rgba(27,202,155,0.2)`,
+                }}
+              >
+                <div className="flex items-center gap-2 mb-4">
+                  <span
+                    className="h-px flex-1"
+                    style={{ background: `linear-gradient(to right, ${TEAL}, transparent)` }}
+                  />
+                  <span
+                    className="text-[11px] font-bold uppercase tracking-[0.16em]"
+                    style={{ color: TEAL }}
+                  >
+                    About {project.name}
+                  </span>
+                  <span
+                    className="h-px flex-1"
+                    style={{ background: `linear-gradient(to left, ${TEAL}, transparent)` }}
+                  />
+                </div>
+                <p className="text-[#374151] leading-relaxed text-[15px]">
+                  {project.brandSummary}
+                </p>
+                {project.brandFacts && project.brandFacts.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.brandFacts.map((fact) => (
+                      <span
+                        key={fact}
+                        className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold"
+                        style={{
+                          background: "rgba(27,202,155,0.08)",
+                          border: "1px solid rgba(27,202,155,0.2)",
+                          color: "#0D1B2A",
+                        }}
+                      >
+                        <span style={{ color: TEAL }}>◆</span> {fact}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </ScrollReveal>
+          )}
+
           {/* Challenge */}
           <ScrollReveal>
             <div className="mb-14">
