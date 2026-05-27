@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 import { BRANDS, type Brand } from "@/data/brands";
+import { TESTIMONIALS } from "@/data/testimonials";
 import { TEAL } from "../theme";
 
 /* ── Brand logo with real image + initials fallback ─────────────────── */
@@ -166,81 +167,89 @@ export function BrandsStrip() {
         </div>
       </div>
 
-      {/* ── Conversion CTA ────────────────────────────────────────────── */}
-      <div className="mx-auto max-w-lg px-6 pt-14 pb-20 lg:pb-28">
-        <div
-          className="rounded-2xl px-8 py-8 text-center"
-          style={{
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
-        >
-          {/* Stacked avatars — real people, not icons */}
-          <div className="flex justify-center mb-5">
-            <div className="flex items-center -space-x-2.5">
-              {(
-                [
-                  { initials: "MD", bg: "#1A5276" },
-                  { initials: "CTO", bg: "#117A65" },
-                  { initials: "HD", bg: "#6D214F" },
-                ] as const
-              ).map(({ initials, bg }, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-center rounded-full border-2 text-white font-bold text-[11px]"
-                  style={{
-                    width: 44,
-                    height: 44,
-                    background: bg,
-                    borderColor: "#0A1929",
-                    zIndex: 3 - i,
-                  }}
-                >
-                  {initials}
+      {/* ── Testimonial cards ─────────────────────────────────────────── */}
+      <div className="mx-auto max-w-7xl px-6 pt-16 pb-20 lg:pb-28">
+        <div className="grid md:grid-cols-3 gap-5">
+          {TESTIMONIALS.map((t) => (
+            <div
+              key={t.initials}
+              className="flex flex-col rounded-2xl overflow-hidden"
+              style={{
+                background: "#fff",
+                border: "1px solid rgba(255,255,255,0.12)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.28)",
+              }}
+            >
+              {/* Header — avatar + name + LinkedIn */}
+              <div className="flex items-center gap-3 px-5 pt-5 pb-4" style={{ borderBottom: "1px solid #F1F5F9" }}>
+                {t.photoUrl ? (
+                  <img
+                    src={t.photoUrl}
+                    alt={t.name}
+                    className="rounded-xl object-cover flex-shrink-0"
+                    style={{ width: 52, height: 52 }}
+                  />
+                ) : (
+                  <div
+                    className="flex items-center justify-center rounded-xl flex-shrink-0 text-white font-bold text-sm"
+                    style={{
+                      width: 52,
+                      height: 52,
+                      background: t.initials === "MD" ? "#1A5276" : t.initials === "CTO" ? "#117A65" : "#6D214F",
+                    }}
+                  >
+                    {t.initials}
+                  </div>
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold text-[#0D1B2A] text-sm truncate">{t.name}</span>
+                    <a
+                      href={t.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-shrink-0"
+                      aria-label="LinkedIn profile"
+                    >
+                      <Linkedin className="h-4 w-4" style={{ color: "#0A66C2" }} fill="#0A66C2" />
+                    </a>
+                  </div>
+                  <p className="text-xs text-[#64748B] mt-0.5 truncate">{t.role}</p>
+                  <p className="text-xs font-semibold mt-0.5 truncate" style={{ color: TEAL }}>{t.company}</p>
                 </div>
-              ))}
+              </div>
+
+              {/* Quote */}
+              <div className="flex-1 px-5 py-4" style={{ background: "#F8FAFC" }}>
+                <p className="text-sm text-[#374151] leading-relaxed">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+              </div>
+
+              {/* Footer */}
+              <div className="px-5 py-4" style={{ borderTop: "1px solid #F1F5F9" }}>
+                <a
+                  href={t.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold transition-opacity hover:opacity-75"
+                  style={{ color: "#0A66C2" }}
+                >
+                  Read on LinkedIn
+                </a>
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Hook — curiosity gap, not a spoiler */}
-          <p
-            className="text-white font-bold text-[22px] leading-snug"
-            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-          >
-            What happened when they<br />partnered with Paarsiv?
-          </p>
-          <p className="mt-2 text-white/45 text-sm">
-            3 clients. Real outcomes. No fluff.
-          </p>
-
-          {/* Outcome chips — hint at results, withhold details */}
-          <div className="mt-5 flex flex-wrap justify-center gap-2">
-            {[
-              "60% → 95% Deliverability",
-              "HIPAA-Compliant Build",
-              "Full Campaign Engine",
-            ].map((outcome) => (
-              <span
-                key={outcome}
-                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold"
-                style={{
-                  background: "rgba(27,202,155,0.1)",
-                  border: "1px solid rgba(27,202,155,0.22)",
-                  color: TEAL,
-                }}
-              >
-                ✓ {outcome}
-              </span>
-            ))}
-          </div>
-
-          {/* Full-width dominant CTA */}
+        {/* CTA */}
+        <div className="mt-10 flex justify-center">
           <Link
             to="/testimonials"
-            className="mt-7 flex items-center justify-center gap-2 rounded-xl w-full py-4 text-base font-bold text-white transition-all hover:opacity-90 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-[10px] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5"
             style={{ background: TEAL }}
           >
-            Read Their Stories <ArrowRight className="h-4.5 w-4.5" style={{ width: 18, height: 18 }} />
+            Check All Testimonials <ArrowRight style={{ width: 16, height: 16 }} />
           </Link>
         </div>
       </div>

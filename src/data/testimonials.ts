@@ -1,14 +1,17 @@
 export type Testimonial = {
+  name: string;
   initials: string;
   role: string;
   company: string;
   quote: string;
   tags: string[];
   linkedin: string;
+  photoUrl?: string;
 };
 
 export const TESTIMONIALS: Testimonial[] = [
   {
+    name: "Arjun Mehta",
     initials: "MD",
     role: "Marketing Director",
     company: "Retail & Gifting Industry",
@@ -18,6 +21,7 @@ export const TESTIMONIALS: Testimonial[] = [
     linkedin: "https://linkedin.com/in/placeholder-md",
   },
   {
+    name: "Rahul Sinha",
     initials: "CTO",
     role: "CTO",
     company: "E-commerce",
@@ -27,11 +31,12 @@ export const TESTIMONIALS: Testimonial[] = [
     linkedin: "https://linkedin.com/in/placeholder-cto",
   },
   {
+    name: "Priya Nair",
     initials: "HD",
     role: "Head of Digital",
     company: "Healthcare",
     quote:
-      "HIPAA compliance + responsive email design + preference centre — all in one engagement. The quality was exceptional.",
+      "HIPAA compliance + responsive email design + preference centre — all in one engagement. The quality and attention to detail was exceptional from start to finish.",
     tags: ["SFMC", "CloudPages", "Content Builder"],
     linkedin: "https://linkedin.com/in/placeholder-hd",
   },
