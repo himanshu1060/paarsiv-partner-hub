@@ -10,7 +10,7 @@ export type Brand = {
 export const BRANDS: Brand[] = [
   // ── Primacy anchors — seen first, remembered most ──
   { name: "Mount Sinai",    initials: "MS",   color: "#1A5276", logoUrl: "/logos/mount-sinai.jpg" },
-  { name: "FnP",            initials: "FnP",  color: "#E85D04", logoUrl: "https://logo.clearbit.com/fnp.com" },
+  { name: "FnP",            initials: "FnP",  color: "#E85D04", logoUrl: "/logos/fnp.png" },
   { name: "Monte Carlo",    initials: "MC",   color: "#922B21", logoUrl: "/logos/monte-carlo.jpg" },
   // ── Mid-strip — supporting depth ──
   { name: "Ramraj",         initials: "RR",   color: "#2E4057", logoUrl: "/logos/ramraj.jpg" },
