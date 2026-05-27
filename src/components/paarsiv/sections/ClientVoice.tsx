@@ -130,9 +130,6 @@ export function ClientVoice() {
 
         {/* Verification note + CTA */}
         <div className="mt-10 flex flex-col items-center gap-5">
-          <p className="text-xs text-[#9CA3AF] text-center max-w-md italic">
-            * These testimonials were shared directly with Paarsiv. LinkedIn profiles are linked so you can reach out and verify independently.
-          </p>
           <Link
             to="/testimonials"
             className="inline-flex items-center gap-2 rounded-[10px] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5"
