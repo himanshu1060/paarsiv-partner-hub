@@ -4,11 +4,8 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 
-import appCss from "../styles.css?url";
 import { Layout } from "@/components/paarsiv/Layout";
 
 function NotFoundComponent() {
@@ -69,55 +66,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Paarsiv — Your Salesforce Delivery Partner" },
-      { name: "description", content: "Paarsiv is a Salesforce implementation partner specialising in Marketing Cloud, Sales Cloud, Data Cloud, and MCP — 25+ certified professionals, 15+ active projects." },
-      { name: "author", content: "Paarsiv" },
-      { property: "og:title", content: "Paarsiv — Your Salesforce Delivery Partner" },
-      { property: "og:description", content: "Paarsiv is a Salesforce implementation partner specialising in Marketing Cloud, Sales Cloud, Data Cloud, and MCP — 25+ certified professionals, 15+ active projects." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Paarsiv — Your Salesforce Delivery Partner" },
-      { name: "twitter:description", content: "Paarsiv is a Salesforce implementation partner specialising in Marketing Cloud, Sales Cloud, Data Cloud, and MCP — 25+ certified professionals, 15+ active projects." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a6ff2687-0a68-4845-8015-62962de4b6a6/id-preview-69ecc1c8--6ca2541f-5fb5-4a3a-9eaf-2b419e68bc9d.lovable.app-1779730166560.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a6ff2687-0a68-4845-8015-62962de4b6a6/id-preview-69ecc1c8--6ca2541f-5fb5-4a3a-9eaf-2b419e68bc9d.lovable.app-1779730166560.png" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
