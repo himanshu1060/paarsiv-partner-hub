@@ -264,7 +264,7 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "mom-system",
-    name: "MOM System",
+    name: "Meridian",
     industry: "Internal Operations",
     clouds: ["SFMC", "CloudPages", "Data Extensions"],
     category: "SFMC",
