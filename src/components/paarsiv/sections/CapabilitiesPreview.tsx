@@ -81,7 +81,7 @@ export function CapabilitiesPreview() {
             className="inline-flex items-center gap-2 rounded-[10px] px-6 py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90"
             style={{ backgroundColor: TEAL }}
           >
-            See Projects We Did <ArrowRight className="h-4 w-4" />
+            View Our Work <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>
